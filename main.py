@@ -27,7 +27,7 @@ if today_tuple in birthdays_dict:
 	with open(chosen_file) as letter_file:
 		letter_contents = letter_file.read()
 
-		final_letter = letter_contents.replace("[NAME]",birthday_person["name"])
+	final_letter = letter_contents.replace("[NAME]",birthday_person["name"])
 
 	my_email = os.environ.get("MY_EMAIL")
 	my_password = os.environ.get("MY_PASSWORD")
