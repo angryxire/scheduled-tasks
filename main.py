@@ -5,7 +5,7 @@ import pandas as pd
 import os
 
 now = dt.datetime.now()
-today_month = nowmonth
+today_month = now.month
 today_day = now.day
 
 today_tuple = (today_month, today_day)
