@@ -1,7 +1,3 @@
-##################### Extra Hard Starting Project ######################
-
-
-
 import smtplib
 import datetime as dt
 import random
@@ -9,7 +5,7 @@ import pandas as pd
 import os
 
 now = dt.datetime.now()
-today_month = now.month
+today_month = nowmonth
 today_day = now.day
 
 today_tuple = (today_month, today_day)
@@ -27,7 +23,7 @@ if today_tuple in birthdays_dict:
 	with open(chosen_file) as letter_file:
 		letter_contents = letter_file.read()
 
-	final_letter = letter_contents.replace("[NAME]",birthday_person["name"])
+		final_letter = letter_contents.replace("[NAME]",birthday_person["name"])
 
 	my_email = os.environ.get("MY_EMAIL")
 	my_password = os.environ.get("MY_PASSWORD")
@@ -37,7 +33,7 @@ if today_tuple in birthdays_dict:
 		connection.login(user=my_email, password=my_password)
 
 		# Sends email.
-	    connection.sendmail(
+		connection. sendmail(
 			from_addr=my_email,
 			to_addrs=birthday_person["email"],
 			msg=f"Subject:Happy Birthday!\n\n{final_letter}."
