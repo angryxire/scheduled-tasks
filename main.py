@@ -13,9 +13,9 @@ today_tuple = (today_month, today_day)
 data = pd.read_csv('birthdays.csv')
 birthdays_dict = {(data_row.month, data_row.day): data_row for (index, data_row) in data.iterrows()}
 
-letter_options = ["scheduled-tasks/letter_templates/letter_1.txt",
-				  "scheduled-tasks/letter_templates/letter_2.txt",
-				  "scheduled-tasks/letter_templates/letter_3.txt"]
+letter_options = ["/letter_templates/letter_1.txt",
+				  "/letter_templates/letter_2.txt",
+				  "/letter_templates/letter_3.txt"]
 
 if today_tuple in birthdays_dict:
 	birthday_person = birthdays_dict[today_tuple]
